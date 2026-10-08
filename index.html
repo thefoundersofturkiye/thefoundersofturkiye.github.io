@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>The Founders Of Türkiye</title>
+<meta name="description" content="Kurtuluş Savaşı co-op FPS · A co-op FPS set in the Turkish War of Independence">
+<link rel="icon" href="simge.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: a dusk-lit field dispatch. Full-bleed intro art, then the front line in years,
+   the soundtrack as a record list, and the community links as telegraph rows.
+   One committed dark look taken from the game's own sunset art. */
+:root {
+  --gece: #170a0b;      /* night ground */
+  --kor: #26100f;       /* ember surface */
+  --cizgi: #4a2219;     /* rules and borders */
+  --mum: #f6efe4;       /* candle-white text (the title colour) */
+  --toz: #c7b39c;       /* dust: secondary text */
+  --gunes: #f3c46b;     /* the sun: accent */
+  --al: #c3262e;        /* flag red, used once */
+  --golge: #3b0f12;     /* the title's drop shadow */
+  --b-dunya: #7fb267;   /* campaign map theatre colours */
+  --b-dogu: #8aa6e0;
+  --b-guney: #e4924a;
+  --b-bati: #e0625a;
+  --f-baslik: "Alfa Slab One", "Rockwell", "Roboto Slab", Georgia, serif;
+  --f-govde: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --s-0: .8125rem; --s-1: 1rem; --s-2: 1.25rem; --s-3: 1.75rem; --s-4: clamp(2rem, 5vw, 3.25rem);
+  --ic: min(1120px, 100%);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--gece); color: var(--mum); font-family: var(--f-govde); font-size: var(--s-1); line-height: 1.6; padding-inline: 16px; }
+:root:not([data-lang="en"]) .en, :root[data-lang="en"] .tr { display: none !important; }
+a { color: var(--gunes); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gunes); outline-offset: 3px; border-radius: 4px; }
+.ic { width: var(--ic); margin-inline: auto; }
+.gizli { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h2 { font-family: var(--f-baslik); font-weight: 400; font-size: var(--s-4); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: .01em; text-shadow: 4px 4px 0 var(--golge); }
+.etiket { font-size: var(--s-0); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gunes); margin: 0; }
+
+/* top bar */
+.ust { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; margin-inline: -16px; padding: 10px 16px; background: color-mix(in srgb, var(--gece) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--cizgi); }
+.ust .ic { display: flex; align-items: center; gap: 12px; }
+.marka { display: flex; align-items: center; gap: 10px; color: var(--mum); text-decoration: none; font-weight: 800; letter-spacing: .02em; min-width: 0; }
+.marka img { width: 34px; height: 34px; border-radius: 50%; }
+.marka span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bosluk { flex: 1; }
+.dil { display: flex; border: 1px solid var(--cizgi); border-radius: 999px; overflow: hidden; }
+.dil button { background: transparent; color: var(--toz); border: 0; font: 700 var(--s-0)/1 var(--f-govde); letter-spacing: .1em; padding: 8px 12px; cursor: pointer; }
+.dil button[aria-pressed="true"] { background: var(--gunes); color: var(--gece); }
+.dugme { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 6px; font-weight: 700; text-decoration: none; border: 1px solid var(--cizgi); color: var(--mum); background: var(--kor); transition: transform .15s, border-color .15s; }
+.dugme:hover { border-color: var(--gunes); transform: translateY(-1px); }
+.dugme.ana { background: var(--gunes); color: var(--gece); border-color: var(--gunes); }
+.ust .dugme { padding: 8px 14px; font-size: var(--s-0); }
+@media (max-width: 560px) { .ust .dugme { display: none; } }
+
+/* hero */
+.giris { margin-inline: -16px; position: relative; background: var(--gece); }
+.giris img { display: block; width: 100%; max-height: 78vh; object-fit: cover; object-position: 50% 30%; }
+.giris::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(transparent, var(--gece)); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .giris img { animation: dogus 1.6s ease-out both; }
+  @keyframes dogus { from { opacity: .35; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+}
+.ozet { display: grid; gap: 20px; justify-items: center; text-align: center; padding-block: 8px 56px; }
+.ozet p.slogan { font-size: var(--s-2); max-width: 46ch; margin: 0; color: var(--mum); }
+.eylemler { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.durum { font-size: var(--s-0); color: var(--toz); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; }
+.durum b { color: var(--al); background: var(--mum); padding: 2px 8px; border-radius: 3px; margin-right: 8px; letter-spacing: .1em; }
+
+section { padding-block: 56px; border-top: 1px solid var(--cizgi); }
+.baslik { display: grid; gap: 10px; margin-bottom: 32px; }
+
+/* about + facts */
+.oyun { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
+.oyun > * { min-width: 0; }
+.oyun p { margin: 0 0 14px; max-width: 60ch; color: var(--toz); }
+.oyun p strong { color: var(--mum); }
+.kunye { margin: 0; display: grid; gap: 0; border: 1px solid var(--cizgi); border-radius: 8px; background: var(--kor); }
+.kunye div { display: grid; grid-template-columns: 9.5rem 1fr; gap: 12px; padding: 14px 18px; border-top: 1px solid var(--cizgi); }
+.kunye div:first-child { border-top: 0; }
+.kunye dt { font-size: var(--s-0); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gunes); }
+.kunye dd { margin: 0; font-weight: 600; }
+@media (max-width: 820px) { .oyun { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .kunye div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* front line: the five theatres of the in-game campaign map, in the map's own colours */
+.bolgeler { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: start; }
+.bolge { --renk: var(--gunes); border-top: 3px solid var(--renk); background: var(--kor); border-radius: 0 0 8px 8px; padding: 14px 16px 10px; min-width: 0; }
+.bolge.dunya { --renk: var(--b-dunya); } .bolge.dogu { --renk: var(--b-dogu); } .bolge.guney { --renk: var(--b-guney); } .bolge.bati { --renk: var(--b-bati); }
+.bolge h3 { margin: 0 0 8px; font-size: var(--s-0); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--renk); }
+.bolge ul { list-style: none; margin: 0; padding: 0; }
+.bolge li { display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-top: 1px dotted var(--cizgi); font-weight: 600; }
+.bolge li:first-child { border-top: 0; }
+.bolge li small { display: block; font-weight: 500; color: var(--toz); font-size: var(--s-0); }
+.bolge .yil { font-variant-numeric: tabular-nums; color: var(--toz); font-weight: 700; }
+.giris-not { margin: -18px 0 24px; color: var(--toz); max-width: 60ch; }
+@media (max-width: 1000px) { .bolgeler { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .bolgeler { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 400px) { .bolgeler { grid-template-columns: 1fr; } }
+
+/* gallery */
+.kareler { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.kareler figure { margin: 0; overflow: hidden; border-radius: 6px; border: 1px solid var(--cizgi); background: var(--kor); min-width: 0; }
+.kareler img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/10; transition: transform .4s; }
+.kareler figure:hover img { transform: scale(1.03); }
+.kareler .genis { grid-column: 1 / -1; }
+.kareler .genis img { aspect-ratio: auto; height: auto; }
+@media (max-width: 600px) { .kareler { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .kareler img, .dugme { transition: none; } }
+
+/* soundtrack */
+.plaklar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.plaklar a { display: grid; grid-template-columns: 9rem 1fr auto; gap: 16px; align-items: center; padding: 10px; border: 1px solid var(--cizgi); border-radius: 8px; background: var(--kor); color: var(--mum); text-decoration: none; transition: border-color .15s; }
+.plaklar a:hover { border-color: var(--gunes); }
+.plaklar img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 4px; display: block; }
+.plaklar .ad { font-family: var(--f-baslik); font-size: var(--s-2); line-height: 1.1; display: block; }
+.plaklar .tur { font-size: var(--s-0); color: var(--gunes); letter-spacing: .1em; font-weight: 700; }
+.plaklar .sure { font-variant-numeric: tabular-nums; color: var(--toz); font-weight: 600; padding-right: 8px; }
+.plaklar > li { min-width: 0; }
+@media (max-width: 820px) { .plaklar { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .plaklar a { grid-template-columns: 6.5rem 1fr; } .plaklar .sure { display: none; } }
+.not { margin: 18px 0 0; font-size: var(--s-0); color: var(--toz); }
+
+/* community */
+.hatlar { list-style: none; margin: 0; padding: 0; border: 1px solid var(--cizgi); border-radius: 8px; overflow: hidden; }
+.hatlar li { border-top: 1px solid var(--cizgi); }
+.hatlar li:first-child { border-top: 0; }
+.hatlar a, .hatlar .kapali { display: grid; grid-template-columns: 8rem 1fr auto; gap: 16px; align-items: center; padding: 16px 20px; color: var(--mum); text-decoration: none; background: var(--kor); }
+.hatlar a:hover { background: color-mix(in srgb, var(--kor) 70%, var(--cizgi)); }
+.hatlar .kanal { font-weight: 800; letter-spacing: .06em; text-transform: uppercase; font-size: var(--s-0); color: var(--gunes); }
+.hatlar .adres { color: var(--toz); overflow-wrap: anywhere; min-width: 0; }
+.hatlar .ok { font-weight: 700; }
+.hatlar .kapali { color: var(--toz); }
+.hatlar .kapali .kanal { color: var(--toz); }
+@media (max-width: 520px) { .hatlar a, .hatlar .kapali { grid-template-columns: 1fr auto; } .hatlar .adres { grid-column: 1 / -1; grid-row: 2; } }
+
+footer { border-top: 1px solid var(--cizgi); padding-block: 28px 40px; color: var(--toz); font-size: var(--s-0); }
+footer .ic { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+
+<header class="ust">
+  <div class="ic">
+    <a class="marka" href="#ust" aria-label="The Founders Of Türkiye"><img src="simge.png" alt=""><span>The Founders Of Türkiye</span></a>
+    <span class="bosluk"></span>
+    <div class="dil" role="group" aria-label="Dil / Language">
+      <button type="button" id="dil-tr" aria-pressed="true">TR</button>
+      <button type="button" id="dil-en" aria-pressed="false">EN</button>
+    </div>
+    <a class="dugme ana" href="https://discord.gg/zQU6yDFA2p" target="_blank" rel="noopener"><span class="tr">Discord'a katıl</span><span class="en">Join Discord</span></a>
+  </div>
+</header>
+
+<main id="ust">
+  <div class="giris">
+    <img src="hero.jpg" width="1920" height="1080" alt="Gün batımında kalpaklı bir siluet ve iki Türk bayrağı; üstte The Founders Of Türkiye yazısı">
+  </div>
+  <h1 class="gizli">The Founders Of Türkiye</h1>
+
+  <div class="ic ozet">
+    <p class="etiket"><span class="tr">Kurtuluş Savaşı · Co-op FPS</span><span class="en">War of Independence · Co-op FPS</span></p>
+    <p class="slogan">
+      <span class="tr">Arkadaşlarınızla omuz omuza savaşın. Çanakkale'den Sarıkamış'a, Samsun'dan Suriye cephesine 50'den fazla tarihî kahraman sizinle.</span>
+      <span class="en">Fight shoulder to shoulder with your friends. From Gallipoli to Sarıkamış, from Samsun to the Syrian front, 50+ historical heroes fight beside you.</span>
+    </p>
+    <div class="eylemler">
+      <a class="dugme ana" href="https://discord.gg/zQU6yDFA2p" target="_blank" rel="noopener"><span class="tr">Discord'a katıl</span><span class="en">Join the Discord</span></a>
+      <a class="dugme" href="https://www.youtube.com/channel/UCh6wse1otzFxnmnEibEJGxw" target="_blank" rel="noopener">YouTube</a>
+      <a class="dugme" href="https://www.instagram.com/thefoundersofturkiye" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="durum"><b>Steam</b><span class="tr">Yakında · Geliştirme sürüyor</span><span class="en">Coming soon · In development</span></p>
+  </div>
+
+  <section id="oyun">
+    <div class="ic oyun">
+      <div>
+        <div class="baslik">
+          <p class="etiket"><span class="tr">Oyun</span><span class="en">The game</span></p>
+          <h2><span class="tr">Bir milletin kuruluşu, bir manganın gözünden</span><span class="en">A nation's founding, seen from the squad</span></h2>
+        </div>
+        <p class="tr"><strong>The Founders Of Türkiye</strong>, Kurtuluş Savaşı ve öncesindeki cephelerde geçen bir co-op FPS. Karakterinizi seçin, cephenizi seçin, arkadaşlarınızla lobi kurup savaşa girin.</p>
+        <p class="en"><strong>The Founders Of Türkiye</strong> is a co-op FPS set on the fronts of the Turkish War of Independence and the years before it. Pick your character, pick your front, open a lobby with your friends and head into battle.</p>
+        <p class="tr">Tek başınıza hikâyeyi oynayabilir ya da online lobide birlikte savaşabilirsiniz. Kadro eksikse boş yerleri botlar doldurur.</p>
+        <p class="en">Play the story on your own or fight together in an online lobby. If your squad is short, bots fill the empty slots.</p>
+      </div>
+      <dl class="kunye">
+        <div><dt><span class="tr">Tür</span><span class="en">Genre</span></dt><dd><span class="tr">Co-op FPS</span><span class="en">Co-op FPS</span></dd></div>
+        <div><dt><span class="tr">Oyuncu</span><span class="en">Players</span></dt><dd><span class="tr">10 kişiye kadar online lobi</span><span class="en">Online lobbies up to 10 players</span></dd></div>
+        <div><dt><span class="tr">Cepheler</span><span class="en">Fronts</span></dt><dd><span class="tr">20 cephe · 1914–1922</span><span class="en">20 fronts · 1914–1922</span></dd></div>
+        <div><dt><span class="tr">Modlar</span><span class="en">Modes</span></dt><dd><span class="tr">Hikâye · Online</span><span class="en">Story · Online</span></dd></div>
+        <div><dt><span class="tr">Kahramanlar</span><span class="en">Heroes</span></dt><dd><span class="tr">50+ tarihî karakter</span><span class="en">50+ historical characters</span></dd></div>
+        <div><dt><span class="tr">Dil</span><span class="en">Language</span></dt><dd><span class="tr">Türkçe · İngilizce yolda</span><span class="en">Turkish · English on the way</span></dd></div>
+        <div><dt><span class="tr">Durum</span><span class="en">Status</span></dt><dd><span class="tr">Geliştiriliyor</span><span class="en">In development</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="cepheler">
+    <div class="ic">
+      <div class="baslik">
+        <p class="etiket"><span class="tr">Cephe hattı</span><span class="en">The front line</span></p>
+        <h2><span class="tr">20 cephe, 1914'ten 1922'ye</span><span class="en">20 fronts, from 1914 to 1922</span></h2>
+      </div>
+      <p class="giris-not"><span class="tr">Oyundaki harekât haritası beş bölgeye ayrılır: Birinci Dünya Savaşı'ndan Samsun'a, oradan doğu, güney ve batı cephelerine.</span><span class="en">The in-game campaign map is split into five theatres: from the First World War to Samsun, then the eastern, southern and western fronts.</span></p>
+      <div class="bolgeler">
+        <div class="bolge dunya"><h3><span class="tr">1. Dünya Savaşı</span><span class="en">World War I</span></h3><ul>
+          <li><span>Sarıkamış</span><span class="yil">1914</span></li>
+          <li><span><span class="tr">Çanakkale</span><span class="en">Gallipoli</span></span><span class="yil">1915</span></li>
+          <li><span>Erzurum<small class="tr">Dalga savunması</small><small class="en">Wave defence</small></span><span class="yil">1918</span></li>
+          <li><span><span class="tr">Suriye</span><span class="en">Syria</span></span><span class="yil">1918</span></li>
+        </ul></div>
+        <div class="bolge"><h3><span class="tr">Başlangıç</span><span class="en">The beginning</span></h3><ul>
+          <li><span>Samsun<small class="tr">19 Mayıs</small><small class="en">19 May</small></span><span class="yil">1919</span></li>
+        </ul></div>
+        <div class="bolge dogu"><h3><span class="tr">Doğu Cephesi</span><span class="en">Eastern Front</span></h3><ul>
+          <li><span>Erzurum</span><span class="yil">1918</span></li>
+          <li><span>Kars</span><span class="yil">1920</span></li>
+          <li><span>Iğdır</span><span class="yil">1920</span></li>
+          <li><span>Ardahan</span><span class="yil">1921</span></li>
+        </ul></div>
+        <div class="bolge guney"><h3><span class="tr">Güney Cephesi</span><span class="en">Southern Front</span></h3><ul>
+          <li><span>Pozantı</span><span class="yil">1920</span></li>
+          <li><span>Maraş</span><span class="yil">1920</span></li>
+          <li><span>Antep</span><span class="yil">1920</span></li>
+          <li><span>Urfa</span><span class="yil">1920</span></li>
+        </ul></div>
+        <div class="bolge bati"><h3><span class="tr">Batı Cephesi</span><span class="en">Western Front</span></h3><ul>
+          <li><span>İnönü</span><span class="yil">1921</span></li>
+          <li><span>Sakarya</span><span class="yil">1921</span></li>
+          <li><span>Afyon</span><span class="yil">1922</span></li>
+          <li><span>Dumlupınar</span><span class="yil">1922</span></li>
+          <li><span>Uşak</span><span class="yil">1922</span></li>
+          <li><span>Manisa</span><span class="yil">1922</span></li>
+          <li><span>İzmir</span><span class="yil">1922</span></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kareler">
+    <div class="ic">
+      <div class="baslik">
+        <p class="etiket"><span class="tr">Oyundan kareler</span><span class="en">Screenshots</span></p>
+        <h2><span class="tr">Cepheden görüntüler</span><span class="en">Scenes from the front</span></h2>
+      </div>
+      <div class="kareler">
+        <figure><img src="kare_menu.jpg" alt="Gün batımında Türk bayrağı, bir at, iki asker ve arkada tüfekli askerler" loading="lazy"></figure>
+        <figure><img src="kare_us.jpg" alt="Ana üs binasının loş ahşap iç mekânı" loading="lazy"></figure>
+        <figure class="genis"><img src="kare_harita.jpg" alt="Oyundaki harekât haritası: Çanakkale 1915'ten İzmir 1922'ye cepheler" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="muzik">
+    <div class="ic">
+      <div class="baslik">
+        <p class="etiket"><span class="tr">Orijinal müzikler</span><span class="en">Original soundtrack</span></p>
+        <h2><span class="tr">Cephenin sesi</span><span class="en">The sound of the front</span></h2>
+      </div>
+      <ul class="plaklar">
+        <li><a href="https://www.youtube.com/watch?v=bA9gp33dGE0" target="_blank" rel="noopener"><img src="muzik_hukum.jpg" alt="" loading="lazy"><span><span class="ad">Hüküm</span><span class="tur"><span class="tr">AYİN</span><span class="en">ANTHEM</span></span></span><span class="sure">2:35</span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=q3hQTSpJoZg" target="_blank" rel="noopener"><img src="muzik_son_mektup.jpg" alt="" loading="lazy"><span><span class="ad">Son Mektup</span><span class="tur"><span class="tr">AĞIT</span><span class="en">LAMENT</span></span></span><span class="sure">4:03</span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=BYmr2ob9DFs" target="_blank" rel="noopener"><img src="muzik_emanet.jpg" alt="" loading="lazy"><span><span class="ad">Emanet</span><span class="tur"><span class="tr">ANA TEMA</span><span class="en">MAIN THEME</span></span></span><span class="sure">2:48</span></a></li>
+        <li><a href="https://www.youtube.com/watch?v=lb1omHYLx80" target="_blank" rel="noopener"><img src="muzik_mehter_drill.jpg" alt="" loading="lazy"><span><span class="ad">Mehter Drill</span><span class="tur">PHONK · DRILL</span></span><span class="sure">1:30</span></a></li>
+      </ul>
+      <p class="not"><span class="tr">Tüm parçalar oyun için bestelendi. Dinlemek için bir parçaya dokunun, YouTube'da açılır.</span><span class="en">Every track was composed for the game. Tap one to listen on YouTube.</span> <a href="https://www.youtube.com/playlist?list=PLXLCMR_haRsM" target="_blank" rel="noopener"><span class="tr">Oynatma listesi</span><span class="en">Playlist</span></a></p>
+    </div>
+  </section>
+
+  <section id="topluluk">
+    <div class="ic">
+      <div class="baslik">
+        <p class="etiket"><span class="tr">Topluluk</span><span class="en">Community</span></p>
+        <h2><span class="tr">Karargâha katılın</span><span class="en">Report to HQ</span></h2>
+      </div>
+      <ul class="hatlar">
+        <li><a href="https://discord.gg/zQU6yDFA2p" target="_blank" rel="noopener"><span class="kanal">Discord</span><span class="adres">discord.gg/zQU6yDFA2p</span><span class="ok" aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.youtube.com/channel/UCh6wse1otzFxnmnEibEJGxw" target="_blank" rel="noopener"><span class="kanal">YouTube</span><span class="adres">The Founders Of Türkiye</span><span class="ok" aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.instagram.com/thefoundersofturkiye" target="_blank" rel="noopener"><span class="kanal">Instagram</span><span class="adres">@thefoundersofturkiye</span><span class="ok" aria-hidden="true">→</span></a></li>
+        <li><div class="kapali"><span class="kanal">TikTok</span><span class="adres"><span class="tr">Yakında</span><span class="en">Coming soon</span></span><span></span></div></li>
+        <li><div class="kapali"><span class="kanal">Steam</span><span class="adres"><span class="tr">Yakında</span><span class="en">Coming soon</span></span><span></span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="ic">
+    <span>© 2026 The Founders Of Türkiye</span>
+    <span class="tr">Bağımsız bir oyun projesi. Resmî bağlantılar yalnızca bu sayfadakilerdir.</span>
+    <span class="en">An independent game project. Only the links on this page are official.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var kok = document.documentElement;
+  var tr = document.getElementById("dil-tr"), en = document.getElementById("dil-en");
+  function ayarla(dil, kaydet) {
+    kok.setAttribute("data-lang", dil);
+    kok.setAttribute("lang", dil);
+    tr.setAttribute("aria-pressed", String(dil === "tr"));
+    en.setAttribute("aria-pressed", String(dil === "en"));
+    if (kaydet) { try { localStorage.setItem("tfot-dil", dil); } catch (e) {} }
+  }
+  var ilk = null;
+  try { ilk = localStorage.getItem("tfot-dil"); } catch (e) {}
+  if (ilk !== "tr" && ilk !== "en") {
+    ilk = /^tr\b/i.test(navigator.language || "tr") ? "tr" : "en";
+  }
+  ayarla(ilk, false);
+  tr.addEventListener("click", function () { ayarla("tr", true); });
+  en.addEventListener("click", function () { ayarla("en", true); });
+})();
+</script>
+
+</body>
+</html>
